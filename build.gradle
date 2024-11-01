@@ -21,11 +21,17 @@ configurations {
 
 repositories {
     mavenCentral()
+    repositories {
+        maven {
+            url "https://repo.fintlabs.no/releases"
+        }
+    }
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'no.fint:fint-utdanning-resource-model-java:3.18.0'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
